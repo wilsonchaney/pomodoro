@@ -56,9 +56,7 @@ class PomodoroState(object):
             raise ValueError("`stage` must be one of Stage.ACTIVE or Stage.REST")
 
         end_time = datetime.now() + self.time_remaining
-
         self.stage = stage
-        print(self.stage)
 
         while self.time_remaining > timedelta():
             if progress_event:

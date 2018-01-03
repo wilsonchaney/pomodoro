@@ -13,7 +13,11 @@ pomo_state = None
 
 ####################
 def notify_user(title, message):
-    call(['notify-send', title, message, '-t', '1000'])
+    if ENABLE_DESKTOP_NOTIFS:
+        try:
+            call(['notify-send', title, message, '-t', '1000'])
+        except FileNotFoundError:
+            print("Skipping desktop notification because `notify-send` wasn't recognized.")
 
 
 def update_progress_line(td):
