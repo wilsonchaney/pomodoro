@@ -1,6 +1,6 @@
 # pomodoro
 
-This is a super basic pomodoro CLI. It has fairly simply integration with i3blocks (using `pomo_state.py`).
+This is a super basic pomodoro CLI. It sends desktop notification using `notify-send`, and it has fairly simply integration with i3blocks (using `pomo_state.py`).
 
 ## Basic Usage
 Just run `./pomo_runner.py` (or `python3 pomo_runner.py`).
