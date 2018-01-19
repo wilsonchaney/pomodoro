@@ -1,6 +1,9 @@
 import json
 from datetime import datetime, timedelta
-from time import sleep
+from os import path
+from time import sleep, time
+
+from constants import STATE_FRESHESS_CUTOFF_SECS
 
 
 def timedelta_str(td):
@@ -12,7 +15,12 @@ def timedelta_str(td):
 
 def read_stage_and_time(fname):
     data = json.load(open(fname))
-    return data["stage"], timedelta(seconds=data["secs_remaining"])
+    last_mod_time = path.getmtime(fname)
+    secs_elapsed = time() - last_mod_time
+    if secs_elapsed < STATE_FRESHESS_CUTOFF_SECS:
+        return data["stage"], timedelta(seconds=data["secs_remaining"])
+    else:
+        return None, None
 
 
 class Stage(object):
