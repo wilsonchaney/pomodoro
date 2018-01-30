@@ -1,0 +1,5 @@
+# repo path
+dir="`dirname \"$(readlink -f \"$0\")\"`"
+
+# run
+python3 "$dir/pomo_runner.py"
