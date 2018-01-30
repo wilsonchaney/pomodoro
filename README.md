@@ -5,6 +5,9 @@ This is a super basic pomodoro CLI. It sends desktop notification using `notify-
 ## Basic Usage
 Just run `./pomo_runner.py` (or `python3 pomo_runner.py`).
 
+## Executable setup (necessary for running w/ rofi)
+There's an install script that creates symlinks for the `start_pomo` and `cancel_pomo` executables, in /usr/bin. Simply run `chmod +x install.sh && ./install.sh`, and you should be good to go.
+
 ## i3blocks
 
 ![Screenshot][screen]
