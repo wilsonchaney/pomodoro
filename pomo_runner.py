@@ -11,6 +11,7 @@ _kill = False
 
 pomo_state = None
 
+# TODO: use dunst
 def notify_user(title, message):
     if ENABLE_DESKTOP_NOTIFS:
         try:
@@ -65,8 +66,7 @@ else:
     while True:
         run_stage(Stage.ACTIVE)
         pomo_state.prep_for_rest()
-        notify_user("Pomodoro completed" % pomo_state.pomos_completed, "Time for the rest stage")
+        notify_user("Pomodoro completed", "Time for the rest stage")
         run_stage(Stage.REST)
         pomo_state.prep_for_active()
-        notify_user("Rest stage completed" % pomo_state.pomos_completed)
-
+        notify_user("Rest stage completed")
