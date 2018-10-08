@@ -2,7 +2,7 @@
 import sys
 
 from constants import STATE_FILE, USE_FONT_AWESOME_ICONS
-from util import timedelta_str, read_stage_and_time, get_pct_completed, Stage
+from util import timedelta_str, read_stage_and_time, Stage
 
 # FontAwesome chars
 if USE_FONT_AWESOME_ICONS:
