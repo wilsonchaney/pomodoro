@@ -69,4 +69,4 @@ else:
         notify_user("Pomodoro completed", "Time for the rest stage")
         run_stage(Stage.REST)
         pomo_state.prep_for_active()
-        notify_user("Rest stage completed")
+        notify_user("Rest stage completed", "Time to get back to work")
