@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # repo path
 dir="`dirname \"$(readlink -f \"$0\")\"`"
 
