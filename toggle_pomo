@@ -1,0 +1,11 @@
+#!/bin/sh
+
+SERVICE="pomo_runner.py"
+RESULT=`ps aux | grep $SERVICE|grep -v grep`
+
+if [ "${RESULT:-null}" = null ]; then
+    start_pomo
+else
+    cancel_pomo
+fi
+
